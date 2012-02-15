@@ -16,9 +16,9 @@ To initialize your local repository using the AOSP manifest, use commands like t
 
     repo init -u git://github.com/CyanogenMod/android.git -b ics
     
-    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/master/local_manifest.xml
+    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/ics/local_manifest.xml
 
-    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/master/local_manifest.xml
+    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/ics/local_manifest.xml
 		and place it in ~/Android/.repo/local_manifest.xml (or ~/'name you chose'/.repo)
 
 Then to sync up:
