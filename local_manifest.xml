@@ -12,6 +12,7 @@
   <remove-project name="CyanogenMod/android_hardware_ti_omap3" />
   <remove-project name="platform/hardware/ti/omap4xxx" />
   <remove-project name="CyanogenMod/android_packages_apps_Phone" />
+  <remove-project name="CyanogenMod/android_packages_apps_Settings" />
   <remove-project name="CyanogenMod/android_packages_providers_ContactsProvider" />
   <remove-project name="CyanogenMod/android_system_core" />
 
@@ -19,6 +20,7 @@
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" />
   <project path="build" name="STS-Dev-Team/android_build" />
   <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
+  <project path="packages/apps/Settings" name="STS-Dev-Team/android_packages_apps_Settings" />
   <project path="packages/providers/ContactsProvider" name="STS-Dev-Team/android_packages_providers_ContactsProvider" />
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
 
