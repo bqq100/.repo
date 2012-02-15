@@ -16,11 +16,11 @@
   <remove-project name="CyanogenMod/android_system_core" />
 
   <!-- CM replacements -->
-  <project path="frameworks/base" name="Hashcode/android_frameworks_base" />
-  <project path="build" name="Hashcode/android_build" />
-  <project path="packages/apps/Phone" name="Hashcode/android_packages_apps_Phone" />
-  <project path="packages/providers/ContactsProvider" name="Hashcode/android_packages_providers_ContactsProvider" />
-  <project path="system/core" name="Hashcode/android_system_core" />
+  <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" />
+  <project path="build" name="STS-Dev-Team/android_build" />
+  <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
+  <project path="packages/providers/ContactsProvider" name="STS-Dev-Team/android_packages_providers_ContactsProvider" />
+  <project path="system/core" name="STS-Dev-Team/android_system_core" />
 
   <!-- CM optionals -->
   <project path="packages/apps/Usb" name="CyanogenDefy/android_packages_apps_Usb" remote="github" revision="ics" />
