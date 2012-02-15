@@ -25,7 +25,7 @@
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
 
   <!-- CM optionals -->
-  <project path="packages/apps/Usb" name="CyanogenDefy/android_packages_apps_Usb" remote="github" revision="ics" />
+  <project path="packages/apps/Usb" name="CyanogenDefy/android_packages_apps_Usb" />
   <project path="external/hostapd" name="CyanogenMod/android_external_hostapd" revision="refs/heads/gingerbread" />
 
   <!-- local projects -->
@@ -38,10 +38,10 @@
   <project path="hardware/ti/tiler" name="platform/hardware/ti/tiler" remote="omapzoom" revision="refs/heads/memmgr_1.0" />
   <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" />
   <!-- <project path="vendor/google" name="Hashcode/proprietary_vendor_google" /> -->
-  <project path="vendor/verizon" name="STS-Dev-Team/proprietary_vendor_verizon" remote="github" revision="ics" />
+  <project path="vendor/verizon" name="STS-Dev-Team/proprietary_vendor_verizon" />
   <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" />
   <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" />
   <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" />
-  <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" remote="github" revision="ics" />
+  <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" />
   
 </manifest>
