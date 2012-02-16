@@ -45,5 +45,6 @@
   <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" />
   <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" />
   <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" />
+  <project path="packages/apps/DockAudio" name="Atrix-Dev-Team/android_packages_apps_DockAudio" revision="refs/heads/gingerbread" />
   
 </manifest>
