@@ -24,7 +24,7 @@
   <project path="packages/apps/Settings" name="STS-Dev-Team/android_packages_apps_Settings" />
   <project path="packages/providers/ContactsProvider" name="STS-Dev-Team/android_packages_providers_ContactsProvider" />
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
-  <project path="system/core" name="STS-Dev-Team/android_vendor_cm" />
+  <project path="vendor/cm" name="STS-Dev-Team/android_vendor_cm" />
 
   <!-- CM optionals -->
   <project path="packages/apps/Usb" name="CyanogenDefy/android_packages_apps_Usb" />
