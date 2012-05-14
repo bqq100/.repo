@@ -28,7 +28,7 @@
 
   <!-- CM optionals -->
   <project path="packages/apps/Usb" name="CyanogenDefy/android_packages_apps_Usb" />
-  <project path="external/hostapd" name="CyanogenMod/android_external_hostapd" revision="refs/heads/gingerbread" />
+  <project path="external/hostapd" name="tpruvot/android_external_hostapd" revision="ics" />
 
   <!-- local projects -->
   <project path="device/motorola/solana" name="STS-Dev-Team/android_device_motorola_solana" />
