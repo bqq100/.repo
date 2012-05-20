@@ -13,7 +13,7 @@
   <remove-project name="CyanogenMod/android_packages_apps_Phone" />
   <remove-project name="CyanogenMod/android_packages_providers_ContactsProvider" />
   <remove-project name="CyanogenMod/android_system_core" />
-  <remove-project name="CyanogenMod/android_vendor_cm" />
+  <!-- ><remove-project name="CyanogenMod/android_vendor_cm" /> -->
   <remove-project name="CyanogenMod/android_packages_apps_Usb" />
 
   <!-- CM replacements -->
@@ -24,7 +24,7 @@
   <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
   <project path="packages/providers/ContactsProvider" name="STS-Dev-Team/android_packages_providers_ContactsProvider" />
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
-  <project path="vendor/cm" name="STS-Dev-Team/android_vendor_cm" />
+  <!-- <project path="vendor/cm" name="STS-Dev-Team/android_vendor_cm" /> -->
 
   <!-- CM optionals -->
   <project path="packages/apps/Usb" name="CyanogenDefy/android_packages_apps_Usb" />
@@ -40,7 +40,6 @@
   <project path="hardware/ti/syslink" name="Hashcode/android_hardware_ti_syslink" />
   <project path="hardware/ti/tiler" name="platform/hardware/ti/tiler" remote="omapzoom" revision="refs/heads/memmgr_1.0" />
   <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" />
-  <!-- <project path="vendor/google" name="Hashcode/proprietary_vendor_google" /> -->
   <project path="vendor/verizon" name="STS-Dev-Team/proprietary_vendor_verizon" />
   <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" />
   <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" />
