@@ -5,6 +5,7 @@
            fetch="git://git.omapzoom.org/" />
 
   <!-- CM removals -->
+  <remove-project name="CyanogenMod/android_hardware_samsung" />
   <remove-project name="CyanogenMod/android_build" />
   <remove-project name="device/ti/panda" />
   <remove-project name="CyanogenMod/android_frameworks_base" />
