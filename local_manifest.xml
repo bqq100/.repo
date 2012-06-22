@@ -15,7 +15,8 @@
   <remove-project name="CyanogenMod/android_system_core" />
   <!-- ><remove-project name="CyanogenMod/android_vendor_cm" /> -->
   <remove-project name="CyanogenMod/android_packages_apps_Usb" />
-
+  <remove-projact name="CyanogenMod/android_vendor_qcom_opensource_omx_mm-audio" />
+  
   <!-- CM replacements -->
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" />
   <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
