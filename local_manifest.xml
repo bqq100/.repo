@@ -5,10 +5,10 @@
            fetch="git://git.omapzoom.org/" />
 
   <!-- CM removals -->
-  <remove-project name="CyanogenMod/android_frameworks_base" />
+  <!-- <remove-project name="CyanogenMod/android_frameworks_base" /> -->
   <remove-project name="CyanogenMod/android_frameworks_native" />
-  <remove-project name="CyanogenMod/android_packages_apps_Phone" />
-  <remove-project name="CyanogenMod/android_packages_apps_Settings" />
+  <!-- <remove-project name="CyanogenMod/android_packages_apps_Phone" />
+  <remove-project name="CyanogenMod/android_packages_apps_Settings" /> -->
   <remove-project name="CyanogenMod/android_system_core" />
   
   <!-- CM replacements -->
