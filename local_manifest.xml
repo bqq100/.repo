@@ -5,6 +5,7 @@
            fetch="git://git.omapzoom.org/" />
 
   <!-- CM removals -->
+  <remove-project name="CyanogenMod/android_external_wpa_supplicant_8" />
   <!-- <remove-project name="CyanogenMod/android_frameworks_base" /> -->
   <remove-project name="CyanogenMod/android_frameworks_native" />
   <!-- <remove-project name="CyanogenMod/android_packages_apps_Phone" />
