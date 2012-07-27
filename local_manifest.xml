@@ -23,10 +23,12 @@
 
   <!-- local projects -->
   <project path="device/motorola/spyder" name="STS-Dev-Team/android_device_motorola_spyder" revision="jb" />
+  <project path="device/motorola/umts_spyder" name="STS-Dev-Team/android_device_motorola_umts_spyder" revision="jb" />
   <project path="device/motorola/solana" name="STS-Dev-Team/android_device_motorola_solana" revision="jb" />
   <!-- <project path="device/motorola/targa" name="STS-Dev-Team/android_device_motorola_targa" revision="jb" />
   <project path="device/motorola/maserati" name="STS-Dev-Team/android_device_motorola_maserati" revision="jb" /> -->
   <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="jb" />
+  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="jb" />
   <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" revision="jb" />
   <!-- <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa"revision="jb"  />
   <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="jb" /> -->
