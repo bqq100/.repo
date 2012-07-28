@@ -30,7 +30,7 @@
   <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="jb" />
   <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="jb" />
   <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" revision="jb" />
-  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa"revision="jb"  />
+  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" revision="jb"  />
   <!-- <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="jb" /> -->
   <project path="vendor/verizon" name="STS-Dev-Team/proprietary_vendor_verizon" revision="jb" />
   <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" revision="ics" />
