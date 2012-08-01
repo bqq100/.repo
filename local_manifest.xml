@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<remote name="mygithub" fetch="git://github.com/" />
+
+<!-- AOSP removals -->
+
+<remove-project name="CyanogenMod/android_hardware_ti_wlan" />
+<remove-project name="CyanogenMod/android_hardware_ti_omap3" />
+
+<!-- OMAPzoom projects -->
+
+<project path="hardware/ti/wlan"  	name="fat-tire/android_hardware_ti_wlan"  	remote="mygithub" revision="jellybean" />
+<project path="hardware/ti/omap3" 	name="fat-tire/android_hardware_ti_omap3" 	remote="mygithub" revision="jellybean" />
+<project path="device/bn/encore"  	name="fat-tire/android_device_bn_encore"  	remote="mygithub" revision="jellybean" />
+<project path="kernel/bn/encore"  	name="keyodi/ti-omap-encore-kernel3"       	remote="mygithub" revision="encore-omap3-3" />
+
+<project path="device/amazon/otter"  	name="riverzhou/android_device_amazon_otter" 	remote="mygithub" revision="jb-cm" />
+<project path="kernel/amazon/otter"  	name="KFire-Android/kernel_omap"         	remote="mygithub" revision="4AI.5" />
+
+</manifest>
+

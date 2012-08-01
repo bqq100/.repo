@@ -1,0 +1,22 @@
+#!/bin/bash
+
+HOST_OS=`uname -s | tr '[:upper:]' '[:lower:]'`
+if [ "$HOST_OS" != "linux" ] ; then
+  echo "ERROR: The gcc this script points to can only run on linux"
+  exit 1
+fi
+
+PROGNAME=`basename $0`
+
+PREFIX32=../../gcc/linux-x86/host/i686-linux-glibc2.7-4.6/bin/i686-linux
+
+options=" ${@} "   # sentinel prefix/suffix space to simplify pattern match below
+
+suffix_m32=${options##* -m32 }    # suffix after the last -m32
+
+len_m32=${#suffix_m32}            # length of suffix after the last -m32
+
+MY_TOOL=`dirname $0`/${PREFIX32}-${PROGNAME}
+
+$MY_TOOL "$@"
+
