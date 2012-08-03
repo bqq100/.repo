@@ -13,6 +13,7 @@
   <remove-project name="CyanogenMod/android_system_core" />
   <remove-project name="CyanogenMod/android_hardware_ti_wlan" />
   <remove-project name="CyanogenMod/android_hardware_ti_wpan" />
+  <remove-project name="CyanogenMod/android_bionic" />
   
   <!-- CM replacements -->
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" />
@@ -20,6 +21,7 @@
   <!-- <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
   <project path="packages/apps/Settings" name="STS-Dev-Team/android_packages_apps_Settings" /> -->
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
+  <project path="bionic" name="STS-Dev-Team/android_bionic" />
 
   <!-- local projects -->
   <project path="device/motorola/spyder" name="STS-Dev-Team/android_device_motorola_spyder" revision="jb" />
