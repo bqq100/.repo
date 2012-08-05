@@ -4,22 +4,24 @@
   <remote  name="omapzoom"
            fetch="git://git.omapzoom.org/" />
 
+  <remote  name="gitorius"
+           fetch="git://gitorious.org/" />
+
   <!-- CM removals -->
   <remove-project name="CyanogenMod/android_external_wpa_supplicant_8" />
   <remove-project name="CyanogenMod/android_frameworks_base" />
-  <remove-project name="CyanogenMod/android_frameworks_native" />
-  <!-- <remove-project name="CyanogenMod/android_packages_apps_Phone" />
-  <remove-project name="CyanogenMod/android_packages_apps_Settings" /> -->
+  <remove-project name="CyanogenMod/android_hardware_libhardware" />
+  <remove-project name="CyanogenMod/android_hardware_libhardware_legacy" />
   <remove-project name="CyanogenMod/android_system_core" />
+  <remove-project name="CyanogenMod/android_hardware_ti_omap4xxx" />
   <remove-project name="CyanogenMod/android_hardware_ti_wlan" />
   <remove-project name="CyanogenMod/android_hardware_ti_wpan" />
   <remove-project name="CyanogenMod/android_bionic" />
   
   <!-- CM replacements -->
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" />
-  <project path="frameworks/native" name="STS-Dev-Team/android_frameworks_native" />
-  <!-- <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
-  <project path="packages/apps/Settings" name="STS-Dev-Team/android_packages_apps_Settings" /> -->
+  <project path="hardware/libhardware" name="STS-Dev-Team/android_hardware_libhardware" />
+  <project path="hardware/libhardware" name="STS-Dev-Team/android_hardware_libhardware_legacy" />
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
   <project path="bionic" name="STS-Dev-Team/android_bionic" />
 
@@ -35,17 +37,22 @@
   <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" revision="jb"  />
   <!-- <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="jb" /> -->
   <project path="vendor/verizon" name="STS-Dev-Team/proprietary_vendor_verizon" revision="jb" />
+  <project path="kernel/motorola/solana" name="droid3-kexec/droid3-kexec-kernel" remote="gitorius" revision="3.0.31" />
   <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" revision="ics" />
   <project path="packages/apps/DockAudio" name="Atrix-Dev-Team/android_packages_apps_DockAudio" revision="refs/heads/gingerbread" />
 
   <!-- TI addons -->
   <project path="external/crda" name="platform/external/crda" remote="omapzoom" revision="p-ics-mr0" />
+  <project path="external/bltsville" name="platform/external/bltsville" remote="omapzoom" revision="master"/>
   <project path="device/ti/proprietary-open" name="device/ti/proprietary-open" remote="omapzoom" revision="jb-release" />
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" remote="omapzoom" revision="p-jb-release" />
   <project path="hardware/ti/wpan" name="platform/hardware/ti/wpan" remote="omapzoom" revision="p-jb-release" />
+  <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" remote="omapzoom" revision="p-jb-release" />
+  <project path="hardware/ti/domx" name="platform/hardware/ti/domx" remote="omapzoom" revision="p-jb-release" />
   <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" remote="omapzoom" revision="p-jb-release" />
+  <project path="packages/apps/OMAPCamera" name="platform/packages/apps/OMAPCamera" remote="omapzoom" revision="jb-release" />
 
-  <!-- spyder kernel -->
+<!-- spyder kernel -->
   <project path="kernel/motorola/omap4_xt912" name="STS-Dev-Team/kernel_omap4_xt912" revision="jellybean" />
   
 </manifest>
