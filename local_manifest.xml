@@ -11,7 +11,6 @@
   <remove-project name="CyanogenMod/android_external_wpa_supplicant_8" />
   <remove-project name="CyanogenMod/android_frameworks_base" />
   <remove-project name="CyanogenMod/android_hardware_libhardware" />
-  <remove-project name="CyanogenMod/android_hardware_libhardware_legacy" />
   <remove-project name="CyanogenMod/android_system_core" />
   <remove-project name="CyanogenMod/android_hardware_ti_omap4xxx" />
   <remove-project name="CyanogenMod/android_hardware_ti_wlan" />
@@ -21,7 +20,6 @@
   <!-- CM replacements -->
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" />
   <project path="hardware/libhardware" name="STS-Dev-Team/android_hardware_libhardware" />
-  <project path="hardware/libhardware_legacy" name="STS-Dev-Team/android_hardware_libhardware_legacy" />
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
   <project path="bionic" name="STS-Dev-Team/android_bionic" />
 
