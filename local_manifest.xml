@@ -18,7 +18,7 @@
 <project path="device/bn/encore"  	name="fat-tire/android_device_bn_encore"  	remote="mygithub" revision="jellybean" />
 <project path="kernel/bn/encore"  	name="keyodi/ti-omap-encore-kernel3"       	remote="mygithub" revision="encore-omap3-3" />
 
-<project path="device/amazon/otter"  	name="riverzhou/device_otter" 			remote="mygithub" revision="jb-cm" />
+<project path="device/amazon/otter"  	name="riverzhou/device_otter" 			remote="mygithub" revision="jb-dev" />
 <project path="kernel/amazon/otter"  	name="KFire-Android/kernel_omap"         	remote="mygithub" revision="4AI.5" />
 
 </manifest>
