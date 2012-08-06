@@ -6,13 +6,11 @@
 
 <!-- AOSP removals -->
 
-<remove-project name="CyanogenMod/android_hardware_ti_wlan" />
 <remove-project name="CyanogenMod/android_hardware_ti_omap3" />
 
 <!-- OMAPzoom projects -->
 
    <!-- OMAPzoom projects -->
-<project path="hardware/ti/wlan" 	name="platform/hardware/ti/wlan" 		remote="omapzoom" revision="p-jb-release" />
 
 <project path="hardware/ti/omap3" 	name="fat-tire/android_hardware_ti_omap3" 	remote="mygithub" revision="jellybean" />
 <project path="device/bn/encore"  	name="fat-tire/android_device_bn_encore"  	remote="mygithub" revision="jellybean" />
