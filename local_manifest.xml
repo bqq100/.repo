@@ -18,7 +18,7 @@
   <remove-project name="CyanogenMod/android_hardware_ti_wlan" />
   <remove-project name="CyanogenMod/android_hardware_ti_wpan" />
   <remove-project name="CyanogenMod/android_bionic" />
-  <remove-project name="CyanogenMod/android_hardware_qcom_audio" />
+  <remove-project name="CyanogenMod/android_hardware_qcom_media" />
   
   <!-- CM replacements -->
   <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" />
