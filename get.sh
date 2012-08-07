@@ -13,6 +13,12 @@ cd prebuilts/gcc/linux-x86/arm
 cd ../../../../
 
 cd bionic
+git checkout -f
 git apply ../local/bionic_libm_pow.patch
+cd ..
+
+cd frameworks
+git checkout -f
+git apply ../local/frameworks-base_rotation.patch
 cd ..
 
