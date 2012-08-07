@@ -1,0 +1,10 @@
+diff --git a/libm/arm/e_pow.S b/libm/arm/e_pow.S
+index a984d4c..55b9dab 100644
+--- a/libm/arm/e_pow.S
++++ b/libm/arm/e_pow.S
+@@ -429,4 +429,4 @@ ENTRY(pow_neon)
+ 
+ .Ltwoto1o4: @ 2^1/4
+     .long       0x0a31b715, 0x3ff306fe
+-END(pow)
++END(pow_neon)
