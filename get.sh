@@ -13,6 +13,6 @@ cd prebuilts/gcc/linux-x86/arm
 cd ../../../../
 
 cd bionic
-git revert --no-edit fc78808c2b6af80fab7fe482f1a7aefc74e12df6  
+git apply ../local/bionic_libm_pow.patch
 cd ..
 
