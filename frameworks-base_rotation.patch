@@ -8,10 +8,10 @@ Change-Id: I5ee85c9aa357cb47bab87d94ca1a85c56c7deabf
  .../android/server/wm/ScreenRotationAnimation.java |   28 +++++++++++++++-----
  1 file changed, 21 insertions(+), 7 deletions(-)
 
-diff --git a/base/services/java/com/android/server/wm/ScreenRotationAnimation.java b/base/services/java/com/android/server/wm/ScreenRotationAnimation.java
+diff --git a/services/java/com/android/server/wm/ScreenRotationAnimation.java b/services/java/com/android/server/wm/ScreenRotationAnimation.java
 index 938db9e..bda0a01 100644
---- a/base/services/java/com/android/server/wm/ScreenRotationAnimation.java
-+++ b/base/services/java/com/android/server/wm/ScreenRotationAnimation.java
+--- a/services/java/com/android/server/wm/ScreenRotationAnimation.java
++++ b/services/java/com/android/server/wm/ScreenRotationAnimation.java
 @@ -47,6 +47,8 @@
      BlackFrame mEnteringBlackFrame;
      int mWidth, mHeight;

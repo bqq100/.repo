@@ -17,8 +17,8 @@ git checkout -f
 git apply ../local/bionic_libm_pow.patch
 cd ..
 
-cd frameworks
+cd frameworks/base
 git checkout -f
-git apply ../local/frameworks-base_rotation.patch
-cd ..
+git apply ../../local/frameworks-base_rotation.patch
+cd ../..
 
