@@ -14,7 +14,7 @@
 
 <project path="hardware/ti/omap3" 	name="fat-tire/android_hardware_ti_omap3" 	remote="mygithub" revision="jellybean" />
 <!--project path="device/bn/encore"  	name="fat-tire/android_device_bn_encore"  	remote="mygithub" revision="jellybean" /-->
-<project path="device/bn/encore"  	name="riverzhou/device_otter"  			remote="mygithub" revision="jellybean" />
+<project path="device/bn/encore"  	name="riverzhou/device_encore"  			remote="mygithub" revision="jellybean" />
 <project path="kernel/bn/encore"  	name="keyodi/ti-omap-encore-kernel3"       	remote="mygithub" revision="encore-omap3-3" />
 
 <project path="device/amazon/otter"  	name="riverzhou/device_otter" 			remote="mygithub" revision="jb-dev" />
