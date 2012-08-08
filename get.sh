@@ -22,3 +22,8 @@ cd ..
 #git apply ../../local/frameworks-base_rotation.patch
 #cd ../..
 
+cd hardware/ti/omap4xxx/
+git checkout -f
+git apply ../../../local/omap4_camera.patch
+cd ../../..
+
