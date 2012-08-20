@@ -7,7 +7,7 @@
 
   <project name="Krylon360/android_hardware_ti_omap3-compat" path="hardware/ti/omap3" remote="mygithub" revision="jellybean" />
   <project name="riverzhou/ti-omap-encore-kernel3" path="kernel/bn/encore" remote="mygithub" revision="encore-omap3-3" />
-  <project name="riverzhou/device_encore" path="device/bn/encore" remote="mygithub" revision="m2" />
+  <project name="riverzhou/device_encore" path="device/bn/encore" remote="mygithub" revision="jb-dev" />
 
   <project name="riverzhou/device_otter" path="device/amazon/otter" remote="mygithub" revision="jb-dev" />
   <project name="KFire-Android/kernel_omap" path="kernel/amazon/otter" remote="mygithub" revision="4AI.5" />
