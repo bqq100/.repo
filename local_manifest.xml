@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote fetch="git://github.com/" name="mygithub" />
+  <remote fetch="git://git.omapzoom.org/" name="omapzoom" />
 
-<remote name="mygithub" fetch="git://github.com/" />
-<remote name="omapzoom" fetch="git://git.omapzoom.org/" />
+  <remove-project name="CyanogenMod/android_hardware_ti_omap3" />
 
+  <project name="Krylon360/android_hardware_ti_omap3-compat" path="hardware/ti/omap3" remote="mygithub" revision="jellybean" />
+  <project name="riverzhou/ti-omap-encore-kernel3" path="kernel/bn/encore" remote="mygithub" revision="encore-omap3-3" />
+  <project name="riverzhou/device_encore" path="device/bn/encore" remote="mygithub" revision="m2" />
 
-<remove-project name="CyanogenMod/android_hardware_ti_omap3" />
-
-
-<project path="hardware/ti/omap3" 	name="Krylon360/android_hardware_ti_omap3-compat"	remote="mygithub" revision="jellybean" />
-<project path="kernel/bn/encore"  	name="keyodi/ti-omap-encore-kernel3"       		remote="mygithub" revision="encore-omap3-3" />
-<project path="device/bn/encore"  	name="fat-tire/android_device_bn_encore"  		remote="mygithub" revision="jellybean" />
-
-<!--
-<project path="device/bn/encore"  	name="riverzhou/device_encore"  			remote="mygithub" revision="jb-dev" />
--->
-
-<project path="device/amazon/otter"  	name="riverzhou/device_otter" 				remote="mygithub" revision="jb-dev" />
-<project path="kernel/amazon/otter"  	name="KFire-Android/kernel_omap"         		remote="mygithub" revision="4AI.5" />
-
+  <project name="riverzhou/device_otter" path="device/amazon/otter" remote="mygithub" revision="jb-dev" />
+  <project name="KFire-Android/kernel_omap" path="kernel/amazon/otter" remote="mygithub" revision="4AI.5" />
 </manifest>
-
