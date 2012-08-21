@@ -5,7 +5,6 @@
 
   <remove-project name="CyanogenMod/android_hardware_ti_omap3" />
 
-  <project name="Krylon360/android_hardware_ti_omap3-compat" path="hardware/ti/omap3" remote="mygithub" revision="jellybean" />
   <project name="riverzhou/ti-omap-encore-kernel3" path="kernel/bn/encore" remote="mygithub" revision="encore-omap3-3" />
   <project name="riverzhou/device_encore" path="device/bn/encore" remote="mygithub" revision="jb-dev" />
 
