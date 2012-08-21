@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote fetch="git://github.com/" name="mygithub" />
-  <remote fetch="git://git.omapzoom.org/" name="omapzoom" />
 
   <remove-project name="CyanogenMod/android_hardware_ti_omap3" />
 
-  <project name="riverzhou/ti-omap-encore-kernel3" path="kernel/bn/encore" remote="mygithub" revision="encore-omap3-3" />
+  <project name="keyodi/ti-omap-encore-kernel3" path="kernel/bn/encore" remote="mygithub" revision="encore-omap3-3" />
   <project name="riverzhou/device_encore" path="device/bn/encore" remote="mygithub" revision="jb-dev" />
 
-  <project name="riverzhou/device_otter" path="device/amazon/otter" remote="mygithub" revision="jb-dev" />
   <project name="KFire-Android/kernel_omap" path="kernel/amazon/otter" remote="mygithub" revision="4AI.5" />
+  <project name="riverzhou/device_otter" path="device/amazon/otter" remote="mygithub" revision="jb-dev" />
 </manifest>
