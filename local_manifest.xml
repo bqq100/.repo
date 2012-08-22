@@ -8,11 +8,11 @@
            fetch="git://gitorious.org/" />
 
   <!-- CM removals -->
-  <remove-project name="CyanogenMod/android_external_wpa_supplicant_8" />
   <remove-project name="CyanogenMod/android_frameworks_av" />
   <remove-project name="CyanogenMod/android_frameworks_base" />
   <remove-project name="CyanogenMod/android_frameworks_native" />
   <remove-project name="CyanogenMod/android_hardware_libhardware" />
+  <remove-project name="CyanogenMod/android_hardware_libhardware_legacy" />
   <remove-project name="CyanogenMod/android_system_core" />
   <remove-project name="CyanogenMod/android_hardware_ti_omap4xxx" />
   <remove-project name="CyanogenMod/android_hardware_ti_wlan" />
@@ -25,6 +25,7 @@
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" />
   <project path="frameworks/native" name="STS-Dev-Team/android_frameworks_native" />
   <project path="hardware/libhardware" name="STS-Dev-Team/android_hardware_libhardware" />
+  <project path="hardware/libhardware_legacy" name="STS-Dev-Team/android_hardware_libhardware_legacy" />
   <project path="hardware/ti/omap4xxx" name="STS-Dev-Team/android_hardware_ti_omap4xxx" />
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
   <project path="bionic" name="STS-Dev-Team/android_bionic" />
@@ -54,11 +55,8 @@
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" remote="omapzoom" revision="p-jb-release" />
   <project path="hardware/ti/wpan" name="platform/hardware/ti/wpan" remote="omapzoom" revision="p-jb-release" />
   <project path="hardware/ti/domx" name="platform/hardware/ti/domx" remote="omapzoom" revision="jb-release" />
-  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" remote="omapzoom" revision="p-jb-release" />
   <project path="packages/apps/OMAPCamera" name="platform/packages/apps/OMAPCamera" remote="omapzoom" revision="jb-release" />
-  <project path="external/wpa_supplicant_8_ti" name="platform/external/wpa_supplicant_8_ti" remote="omapzoom" revision="jb-release" /> 
+  <project path="external/wpa_supplicant_8_ti" name="platform/external/wpa_supplicant_8_ti" remote="omapzoom" revision="jb-release" />
 
-<!-- spyder kernel -->
-  <project path="kernel/motorola/omap4_xt912" name="STS-Dev-Team/kernel_omap4_xt912" revision="jellybean" />
-  
 </manifest>
+
