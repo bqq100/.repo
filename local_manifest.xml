@@ -30,19 +30,23 @@
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
   <project path="bionic" name="STS-Dev-Team/android_bionic" />
 
-  <!-- local projects -->
-  <project path="device/motorola/spyder" name="STS-Dev-Team/android_device_motorola_spyder" revision="jb" />
-  <project path="device/motorola/umts_spyder" name="STS-Dev-Team/android_device_motorola_umts_spyder" revision="jb" />
+  <!-- local devices -->
   <project path="device/motorola/solana" name="STS-Dev-Team/android_device_motorola_solana" revision="jb" />
   <project path="device/motorola/targa" name="STS-Dev-Team/android_device_motorola_targa" revision="jb" />
-  <!-- <project path="device/motorola/maserati" name="STS-Dev-Team/android_device_motorola_maserati" revision="jb" /> -->
+  <project path="device/motorola/spyder" name="STS-Dev-Team/android_device_motorola_spyder" revision="jb" />
+  <project path="device/motorola/maserati" name="STS-Dev-Team/android_device_motorola_maserati" revision="jb" />
+  <project path="device/motorola/umts_spyder" name="STS-Dev-Team/android_device_motorola_umts_spyder" revision="jb" />
+
+  <!-- local vendor -->
   <project path="vendor/motorola/common" name="STS-Dev-Team/android_vendor_motorola_common" revision="jb" />
-  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="jb" />
-  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="jb" />
-  <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" revision="jb" />
+  <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" revision="master" />
   <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" revision="jb"  />
-  <!-- <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="jb" /> -->
+  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="jb" />
+  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="master" />
+  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="jb" />
   <project path="vendor/verizon" name="STS-Dev-Team/proprietary_vendor_verizon" revision="jb" />
+
+  <!-- local misc -->
   <project path="kernel/motorola/mapphone" name="STS-Dev-Team/kernel_mapphone_kexec" revision="3.0.31" />
   <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" revision="ics" />
   <project path="packages/apps/DockAudio" name="Atrix-Dev-Team/android_packages_apps_DockAudio" revision="refs/heads/gingerbread" />
@@ -58,5 +62,5 @@
   <project path="packages/apps/OMAPCamera" name="platform/packages/apps/OMAPCamera" remote="omapzoom" revision="jb-release" />
   <project path="external/wpa_supplicant_8_ti" name="platform/external/wpa_supplicant_8_ti" remote="omapzoom" revision="jb-release" />
 
+  
 </manifest>
-
