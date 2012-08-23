@@ -38,13 +38,13 @@
   <project path="device/motorola/umts_spyder" name="STS-Dev-Team/android_device_motorola_umts_spyder" revision="jb" />
 
   <!-- local vendor -->
+  <project path="vendor/verizon" name="STS-Dev-Team/proprietary_vendor_verizon" revision="jb" />
   <project path="vendor/motorola/common" name="STS-Dev-Team/android_vendor_motorola_common" revision="jb" />
   <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" revision="master" />
-  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" revision="jb"  />
-  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="jb" />
+  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" revision="master"  />
+  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="master" />
   <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="master" />
-  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="jb" />
-  <project path="vendor/verizon" name="STS-Dev-Team/proprietary_vendor_verizon" revision="jb" />
+  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="master" />
 
   <!-- local misc -->
   <project path="kernel/motorola/mapphone" name="STS-Dev-Team/kernel_mapphone_kexec" revision="3.0.31" />
