@@ -4,7 +4,7 @@
 
   <remove-project name="CyanogenMod/android_hardware_ti_omap3" />
 
-  <project name="keyodi/ti-omap-encore-kernel3" path="kernel/bn/encore" remote="mygithub" revision="encore-omap3-3" />
+  <project name="riverzhou/encore-omap3-3" path="kernel/bn/encore" remote="mygithub" revision="keyodi" />
   <project name="riverzhou/device_encore" path="device/bn/encore" remote="mygithub" revision="m2" />
 
   <project name="KFire-Android/kernel_omap" path="kernel/amazon/otter" remote="mygithub" revision="4AI.5" />
