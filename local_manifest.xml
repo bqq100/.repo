@@ -44,10 +44,10 @@
   <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
   <project path="packages/apps/Settings" name="STS-Dev-Team/android_packages_apps_Settings" />
   <project path="packages/apps/Stk" name="STS-Dev-Team/android_packages_apps_Stk" />
-  <project path="packages/apps/VoiceDialer" name="CyanogenMod/android_packages_apps_VoiceDialer" />
+  <project path="packages/apps/VoiceDialer" name="STS-Dev-Team/android_packages_apps_VoiceDialer" />
   <project path="packages/providers/ContactsProvider" name="STS-Dev-Team/android_packages_providers_ContactsProvider" />
   <project path="packages/providers/DrmProvider" name="STS-Dev-Team/android_packages_providers_DrmProvider" />
-  <project path="packages/providers/TelephonyProvider" name="CyanogenMod/android_packages_providers_TelephonyProvider" />
+  <project path="packages/providers/TelephonyProvider" name="STS-Dev-Team/android_packages_providers_TelephonyProvider" />
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
 
   <!-- local devices -->
