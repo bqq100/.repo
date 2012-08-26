@@ -30,7 +30,7 @@
   
   <!-- CM replacements -->
   <project path="bionic" name="STS-Dev-Team/android_bionic" />
-  <project path="bionic" name="STS-Dev-Team/android_build" />
+  <project path="build" name="STS-Dev-Team/android_build" />
   <project path="development" name="STS-Dev-Team/android_development" />
   <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" />
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" revision="jellybean-3way" />
@@ -41,8 +41,8 @@
   <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" revision="jellybean" />
   <project path="packages/apps/Contacts" name="STS-Dev-Team/android_packages_apps_Contacts" />
   <project path="packages/apps/Mms" name="STS-Dev-Team/android_packages_apps_Mms" />
-  <project path="packages/apps/Mms" name="STS-Dev-Team/android_packages_apps_Phone" />
-  <project path="packages/apps/Stk" name="STS-Dev-Team/android_packages_apps_Settings" />
+  <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
+  <project path="packages/apps/Settings" name="STS-Dev-Team/android_packages_apps_Settings" />
   <project path="packages/apps/Stk" name="STS-Dev-Team/android_packages_apps_Stk" />
   <project path="packages/apps/VoiceDialer" name="CyanogenMod/android_packages_apps_VoiceDialer" />
   <project path="packages/providers/ContactsProvider" name="STS-Dev-Team/android_packages_providers_ContactsProvider" />
