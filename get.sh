@@ -15,15 +15,7 @@ cd ../../../../
 cd bionic
 git checkout -f
 git apply ../local/bionic_libm_pow.patch
+git apply ../local/bionic_linaro_str.patch
 cd ..
 
-#cd frameworks/base
-#git checkout -f
-#git apply ../../local/frameworks-base_rotation.patch
-#cd ../..
-
-cd hardware/ti/omap4xxx/
-git checkout -f
-git apply ../../../local/omap4_camera.patch
-cd ../../..
 
