@@ -53,6 +53,7 @@
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
 
   <!-- local devices -->
+  <project path="device/motorola/common" name="STS-Dev-Team/android_device_motorola_common" revision="jb" />
   <project path="device/motorola/maserati" name="STS-Dev-Team/android_device_motorola_maserati" revision="jb" />
   <project path="device/motorola/solana" name="STS-Dev-Team/android_device_motorola_solana" revision="jb" />
   <project path="device/motorola/spyder" name="STS-Dev-Team/android_device_motorola_spyder" revision="jb" />
