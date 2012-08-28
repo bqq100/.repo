@@ -29,8 +29,10 @@
   <remove-project name="CyanogenMod/android_packages_providers_TelephonyProvider" />
   
   <!-- CM replacements -->
+  <project path="build" name="STS-Dev-Team/android_build" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
   <project path="bionic" name="STS-Dev-Team/android_bionic" />
-  <project path="build" name="STS-Dev-Team/android_build" />
   <project path="development" name="STS-Dev-Team/android_development" />
   <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" />
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" revision="jellybean-3way" />
