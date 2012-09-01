@@ -74,7 +74,7 @@
   <project path="frameworks/opt/telephony" name="STS-Dev-Team/android_frameworks_opt_telephony" revision="test"/>
   <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" revision="ics" />
   <project path="kernel/motorola/mapphone" name="STS-Dev-Team/kernel_mapphone_kexec" revision="3.0.31" />
-  <project path="prebuilt/linux-x86/toolchain/arm-eabi-4.7" name="STS-Dev-Team/arm-eabi-4.7" remote="gh" revision="master" />
+  <project path="prebuilt/linux-x86/toolchain/arm-eabi-4.7" name="STS-Dev-Team/arm-eabi-4.7" revision="master" />
 
   <!-- TI addons -->
   <project path="device/ti/common-open" name="device/ti/common-open" remote="omapzoom" revision="jb-release" />
