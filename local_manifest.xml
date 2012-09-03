@@ -7,6 +7,6 @@
   <project name="riverzhou/encore-omap3-3" path="kernel/bn/encore"    remote="mygithub" revision="m3" />
   <project name="riverzhou/device_encore"  path="device/bn/encore"    remote="mygithub" revision="m3" />
 
-  <project name="riverzhou/otter-omap-3"   path="kernel/amazon/otter" remote="mygithub" revision="4AI1.7" />
+  <project name="riverzhou/otter-omap-3"   path="kernel/amazon/otter" remote="mygithub" revision="jb-dev" />
   <project name="riverzhou/device_otter"   path="device/amazon/otter" remote="mygithub" revision="jb-dev" />
 </manifest>
