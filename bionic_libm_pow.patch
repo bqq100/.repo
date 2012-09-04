@@ -1,3 +1,20 @@
+diff --git a/libm/Android.mk b/libm/Android.mk
+index 1403e0b..36c38a3 100644
+--- a/libm/Android.mk
++++ b/libm/Android.mk
+@@ -168,6 +168,12 @@ ifeq ($(TARGET_ARCH),arm)
+     libm_common_cflags += -DKRAIT_NEON_OPTIMIZATION
+   endif
+ 
++  ifeq ($(TARGET_USE_OMAP3_BIONIC_OPTIMIZATION),true)
++    libm_common_src_files += \
++          arm/e_pow.S
++    libm_common_cflags += -DOMAP3_NEON_OPTIMIZATION
++  endif
++
+   libm_common_includes = $(LOCAL_PATH)/arm
+ 
+ else
 diff --git a/libm/arm/e_pow.S b/libm/arm/e_pow.S
 index a984d4c..55b9dab 100644
 --- a/libm/arm/e_pow.S
@@ -9,7 +26,7 @@ index a984d4c..55b9dab 100644
 -END(pow)
 +END(pow_neon)
 diff --git a/libm/src/e_pow.c b/libm/src/e_pow.c
-index 50b07a6..55e9519 100644
+index 50b07a6..a82ed86 100644
 --- a/libm/src/e_pow.c
 +++ b/libm/src/e_pow.c
 @@ -13,7 +13,7 @@
@@ -17,7 +34,7 @@ index 50b07a6..55e9519 100644
  #endif
  
 -#if defined(KRAIT_NEON_OPTIMIZATION)
-+#if ( defined(KRAIT_NEON_OPTIMIZATION) && !defined(TARGET_NOT_USE_POW_NEON) )
++#if ( defined(KRAIT_NEON_OPTIMIZATION) || defined(OMAP3_NEON_OPTIMIZATION) )
  double pow_neon(double x, double y);
  #endif
  
@@ -26,7 +43,7 @@ index 50b07a6..55e9519 100644
  	    SET_LOW_WORD(t1,0);
  	    t2 = v-(t1-u);
 -#if defined(KRAIT_NEON_OPTIMIZATION)
-+#if ( defined(KRAIT_NEON_OPTIMIZATION) && !defined(TARGET_NOT_USE_POW_NEON) )
++#if ( defined(KRAIT_NEON_OPTIMIZATION) || defined(OMAP3_NEON_OPTIMIZATION) )
  	} else if (ix <= 0x40100000 && iy <= 0x40100000 && hy > 0 && hx > 0) {
  		return pow_neon(x,y);
  #endif
