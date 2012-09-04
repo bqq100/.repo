@@ -17,7 +17,7 @@ index 50b07a6..fb3ba07 100644
  #endif
 
 -#if defined(KRAIT_NEON_OPTIMIZATION)
-+#if ( defined(KRAIT_NEON_OPTIMIZATION) && !defined(NO_POW_NEON) )
++#if ( defined(KRAIT_NEON_OPTIMIZATION) && !defined(TARGET_NO_USE_POW_NEON) )
  double pow_neon(double x, double y);
  #endif
 
@@ -26,7 +26,7 @@ index 50b07a6..fb3ba07 100644
             SET_LOW_WORD(t1,0);
             t2 = v-(t1-u);
 -#if defined(KRAIT_NEON_OPTIMIZATION)
-+#if ( defined(KRAIT_NEON_OPTIMIZATION) && !defined(NO_POW_NEON) )
++#if ( defined(KRAIT_NEON_OPTIMIZATION) && !defined(TARGET_NO_USE_POW_NEON) )
         } else if (ix <= 0x40100000 && iy <= 0x40100000 && hy > 0 && hx > 0) {
                 return pow_neon(x,y);
  #endif
