@@ -1,0 +1,255 @@
+From aa43d741a9c8afc886793e39f620b7df8ba6ea33 Mon Sep 17 00:00:00 2001
+From: root <riverzhou2000@gmail.com>
+Date: Thu, 6 Sep 2012 16:43:53 +0800
+Subject: [PATCH] OMAP3_AV_ENHANCE -- add by river
+
+---
+ include/media/stagefright/OMXCodec.h   |    2 +
+ media/libstagefright/Android.mk        |    4 ++
+ media/libstagefright/AwesomePlayer.cpp |    3 +
+ media/libstagefright/OMXCodec.cpp      |  106 +++++++++++++++++++++++++++++++-
+ 4 files changed, 114 insertions(+), 1 deletion(-)
+
+diff --git a/include/media/stagefright/OMXCodec.h b/include/media/stagefright/OMXCodec.h
+index 6c5cec8..008c540 100644
+--- a/include/media/stagefright/OMXCodec.h
++++ b/include/media/stagefright/OMXCodec.h
+@@ -190,6 +190,8 @@ private:
+         size_t mSize;
+         void *mData;
+         MediaBuffer *mMediaBuffer;
++        OMX_U8 *mAllocatedBuffer;
++        OMX_U32 mAllocatedSize;
+     };
+ 
+     struct CodecSpecificData {
+diff --git a/media/libstagefright/Android.mk b/media/libstagefright/Android.mk
+index c2b185b..a37b277 100644
+--- a/media/libstagefright/Android.mk
++++ b/media/libstagefright/Android.mk
+@@ -9,6 +9,10 @@ endif
+ 
+ include frameworks/av/media/libstagefright/codecs/common/Config.mk
+ 
++ifeq ($(BOARD_USE_OMAP3_AV_ENHANCE),true)
++LOCAL_CFLAGS += -DOMAP3_AV_ENHANCE
++endif
++
+ ifeq ($(TARGET_SOC),exynos4210)
+ LOCAL_CFLAGS += -DCONFIG_MFC_FPS
+ endif
+diff --git a/media/libstagefright/AwesomePlayer.cpp b/media/libstagefright/AwesomePlayer.cpp
+index eebd61b..8f7a022 100644
+--- a/media/libstagefright/AwesomePlayer.cpp
++++ b/media/libstagefright/AwesomePlayer.cpp
+@@ -1312,6 +1312,9 @@ void AwesomePlayer::initRenderer_l() {
+     if (USE_SURFACE_ALLOC
+             && !strncmp(component, "OMX.", 4)
+             && strncmp(component, "OMX.google.", 11)
++#ifdef OMAP3_AV_ENHANCE
++            && strncmp(component, "OMX.TI.", 7)
++#endif
+             && strcmp(component, "OMX.Nvidia.mpeg2v.decode")) {
+         // Hardware decoders avoid the CPU color conversion by decoding
+         // directly to ANativeBuffers, so we must use a renderer that
+diff --git a/media/libstagefright/OMXCodec.cpp b/media/libstagefright/OMXCodec.cpp
+index 0013419..b111223 100644
+--- a/media/libstagefright/OMXCodec.cpp
++++ b/media/libstagefright/OMXCodec.cpp
+@@ -285,9 +285,33 @@ uint32_t OMXCodec::getComponentQuirks(
+         quirks |= kOutputBuffersAreUnreadable;
+     }
+     if (list->codecHasQuirk(
+-                index, "requies-loaded-to-idle-after-allocation")) {
++                index, "requires-loaded-to-idle-after-allocation")) {
+       quirks |= kRequiresLoadedToIdleAfterAllocation;
+     }
++    if (list->codecHasQuirk(
++                index, "needs-flush-before-disable")) {
++      quirks |= kNeedsFlushBeforeDisable;
++    }
++    if (list->codecHasQuirk(
++                index, "decoder-lies-about-nubmer-of-channels")) {
++      quirks |= kDecoderLiesAboutNumberOfChannels;
++    }
++    if (list->codecHasQuirk(
++                index, "requires-flush-complete-emulation")) {
++      quirks |= kRequiresFlushCompleteEmulation;
++    }
++    if (list->codecHasQuirk(
++                index, "supports-multiple-frames-per-input-buffer")) {
++      quirks |= kSupportsMultipleFramesPerInputBuffer;
++    }
++    if (list->codecHasQuirk(
++                index, "input-buffer-sizes-are-bogus")) {
++      quirks |= kInputBufferSizesAreBogus;
++    }
++    if (list->codecHasQuirk(
++                index, "avoid-memcopy-input-recording-frames")) {
++      quirks |= kAvoidMemcopyInputRecordingFrames;
++    }
+ #ifdef QCOM_HARDWARE
+     if (list->codecHasQuirk(
+                 index, "requires-global-flush")) {
+@@ -412,6 +436,23 @@ sp<MediaSource> OMXCodec::Create(
+ #endif
+         ALOGV("Attempting to allocate OMX node '%s'", componentName);
+ 
++#ifdef OMAP3_AV_ENHANCE
++        if (!strcmp(componentName, "OMX.TI.Video.Decoder")) {
++            int32_t width, height;
++            bool success = meta->findInt32(kKeyWidth, &width);
++            success = success && meta->findInt32(kKeyHeight, &height);
++            CHECK(success);
++            // We need this for 720p video without AVC profile
++            // Not a good solution, but ..
++            if (width*height > 412800) {  //860*480
++               componentName = "OMX.TI.720P.Decoder";
++               ALOGE("Format exceed the decoder's capabilities. %d", width*height);
++               continue;
++            }
++        }
++#endif
++
++
+         if (!createEncoder
+                 && (quirks & kOutputBuffersAreUnreadable)
+                 && (flags & kClientNeedsFramebuffer)) {
+@@ -603,6 +644,17 @@ status_t OMXCodec::configureCodec(const sp<MetaData> &meta) {
+             CODEC_LOGI(
+                     "AVC profile = %u (%s), level = %u",
+                     profile, AVCProfileToString(profile), level);
++
++            if (!strcmp(mComponentName, "OMX.TI.Video.Decoder")
++                && (profile != kAVCProfileBaseline || level > 31)) {
++                // This stream exceeds the decoder's capabilities. The decoder
++                // does not handle this gracefully and would clobber the heap
++                // and wreak havoc instead...
++
++                ALOGE("Profile and/or level exceed the decoder's capabilities.");
++                return ERROR_UNSUPPORTED;
++            }
++
+         } else if (meta->findData(kKeyVorbisInfo, &type, &data, &size)) {
+             addCodecSpecificData(data, size);
+ 
+@@ -797,6 +849,12 @@ status_t OMXCodec::configureCodec(const sp<MetaData> &meta) {
+         setMinBufferSize(kPortIndexInput, (OMX_U32)maxInputSize);
+     }
+ 
++    if (!strcmp(mComponentName, "OMX.TI.AMR.encode")
++        || !strcmp(mComponentName, "OMX.TI.WBAMR.encode")
++        || !strcmp(mComponentName, "OMX.TI.AAC.encode")) {
++        setMinBufferSize(kPortIndexOutput, 8192); // XXX
++    }
++
+     initOutputFormat(meta);
+ #ifdef QCOM_HARDWARE
+     if ((!strncasecmp(mMIME, "audio/", 6)) && (!strncmp(mComponentName, "OMX.qcom.", 9))) {
+@@ -921,6 +979,22 @@ status_t OMXCodec::setVideoPortFormatType(
+              index, format.eCompressionFormat, format.eColorFormat);
+ #endif
+ 
++        if (!strcmp("OMX.TI.Video.encoder", mComponentName)) {
++            if (portIndex == kPortIndexInput
++                    && colorFormat == format.eColorFormat) {
++                // eCompressionFormat does not seem right.
++                found = true;
++                break;
++            }
++            if (portIndex == kPortIndexOutput
++                    && compressionFormat == format.eCompressionFormat) {
++                // eColorFormat does not seem right.
++                found = true;
++                break;
++            }
++        }
++
++
+         if (format.eCompressionFormat == compressionFormat
+                 && format.eColorFormat == colorFormat) {
+             found = true;
+@@ -1004,6 +1078,10 @@ status_t OMXCodec::findTargetColorFormat(
+     int32_t targetColorFormat;
+     if (meta->findInt32(kKeyColorFormat, &targetColorFormat)) {
+         *colorFormat = (OMX_COLOR_FORMATTYPE) targetColorFormat;
++    } else {
++        if (!strcasecmp("OMX.TI.Video.encoder", mComponentName)) {
++            *colorFormat = OMX_COLOR_FormatYCbYCr;
++        }
+     }
+ 
+     // Check whether the target color format is supported.
+@@ -1644,6 +1722,9 @@ OMXCodec::OMXCodec(
+       mPaused(false),
+       mNativeWindow(
+               (!strncmp(componentName, "OMX.google.", 11)
++#ifdef OMAP3_AV_ENHANCE
++              || !strncmp(componentName, "OMX.TI.", 7)
++#endif
+               || !strcmp(componentName, "OMX.Nvidia.mpeg2v.decode"))
+                         ? NULL : nativeWindow)
+ #ifdef QCOM_HARDWARE
+@@ -1898,6 +1979,8 @@ status_t OMXCodec::allocateBuffersOnPort(OMX_U32 portIndex) {
+         BufferInfo info;
+         info.mData = NULL;
+         info.mSize = def.nBufferSize;
++        info.mAllocatedBuffer = NULL;
++        info.mAllocatedSize = 0;
+ 
+         IOMX::buffer_id buffer;
+         if (portIndex == kPortIndexInput
+@@ -2272,6 +2355,8 @@ status_t OMXCodec::allocateOutputBuffersFromNativeWindow() {
+         info.mSize = def.nBufferSize;
+         info.mStatus = OWNED_BY_US;
+         info.mMem = NULL;
++        info.mAllocatedBuffer = NULL;
++        info.mAllocatedSize = 0;
+         info.mMediaBuffer = new MediaBuffer(graphicBuffer);
+         info.mMediaBuffer->setObserver(this);
+ 
+@@ -3260,6 +3345,12 @@ status_t OMXCodec::freeBuffer(OMX_U32 portIndex, size_t bufIndex) {
+ 
+     BufferInfo *info = &buffers->editItemAt(bufIndex);
+ 
++    if (info->mAllocatedBuffer != NULL) {
++        OMX_BUFFERHEADERTYPE *header = (OMX_BUFFERHEADERTYPE *) info->mBuffer;
++        header->pBuffer = info->mAllocatedBuffer;
++        header->nAllocLen = info->mAllocatedSize;
++    }
++
+     status_t err = mOMX->freeBuffer(mNode, portIndex, info->mBuffer);
+ 
+     if (err == OK && info->mMediaBuffer != NULL) {
+@@ -3631,8 +3722,14 @@ bool OMXCodec::drainInputBuffer(BufferInfo *info) {
+ 
+             CHECK(header->pBuffer == info->mData);
+ 
++            if (info->mAllocatedBuffer == NULL) {
++                info->mAllocatedBuffer = header->pBuffer;
++                info->mAllocatedSize = header->nAllocLen;
++            }
++
+             header->pBuffer =
+                 (OMX_U8 *)srcBuffer->data() + srcBuffer->range_offset();
++            header->nAllocLen = srcBuffer->size() - srcBuffer->range_offset();
+ 
+             releaseBuffer = false;
+             info->mMediaBuffer = srcBuffer;
+@@ -3789,6 +3886,13 @@ bool OMXCodec::drainInputBuffer(BufferInfo *info) {
+ 
+     info->mStatus = OWNED_BY_COMPONENT;
+ 
++    // This component does not ever signal the EOS flag on output buffers,
++    // Thanks for nothing.
++    if (mSignalledEOS && !strcmp(mComponentName, "OMX.TI.Video.encoder")) {
++        mNoMoreOutputData = true;
++        mBufferFilled.signal();
++    }
++
+     return true;
+ }
+ 
+-- 
+1.7.9.5
+
