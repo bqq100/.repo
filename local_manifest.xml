@@ -5,7 +5,6 @@
   <project name="riverzhou/local_and_script"   path="local"           remote="mygithub" revision="jb-dev" />
 
   <remove-project name="CyanogenMod/android_hardware_ti_omap3" />
-  <project name="riverzhou/omap3-compat"   path="hardware/ti/omap3"   remote="mygithub" revision="m3" />
   <project name="riverzhou/encore-omap3-3" path="kernel/bn/encore"    remote="mygithub" revision="m3" />
   <project name="riverzhou/device_encore"  path="device/bn/encore"    remote="mygithub" revision="m3" />
 
