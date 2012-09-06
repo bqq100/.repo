@@ -1,0 +1,23 @@
+From 9b23fc3aa5980d2132f61a7c51db9881a7149390 Mon Sep 17 00:00:00 2001
+From: river <riverzhou2000@gmail.com>
+Date: Thu, 6 Sep 2012 20:59:36 +0800
+Subject: [PATCH 1/2] fix linaro gcc build powe_neon broken
+
+Change-Id: I2406c9db84b895f534ea37ec8295447f67d7c11b
+---
+ libm/arm/e_pow.S |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libm/arm/e_pow.S b/libm/arm/e_pow.S
+index 1e328f8..8ca9c79 100644
+--- a/libm/arm/e_pow.S
++++ b/libm/arm/e_pow.S
+@@ -440,4 +440,4 @@ ENTRY(pow_neon)
+ 
+ .Ltwoto1o4: @ 2^1/4
+     .long       0x0a31b715, 0x3ff306fe
+-END(pow)
++END(pow_neon)
+-- 
+1.7.9.5
+
