@@ -1,4 +1,4 @@
-Local manifest addon for Cyanogenmod Jellybean on moto
+Local manifest addon for Cyanogenmod Jellybean stock-based for OMAP4 devices
 
 Getting Started
 ---------------
@@ -16,9 +16,9 @@ To initialize your local repository using the Cyanogemod manifest, use commands 
 
     repo init -u git://github.com/CyanogenMod/android.git -b jellybean
     
-    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/jellybean-cm-master/local_manifest.xml
+    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/jellybean-cm-stock/local_manifest.xml
 
-    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/jellybean-cm-master/local_manifest.xml
+    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/jellybean-cm-stock/local_manifest.xml
 		and place it in ~/Android/.repo/local_manifest.xml (or ~/'name you chose'/.repo)
 
 Then to sync up:
