@@ -1,7 +1,5 @@
 #!/bin/sh
 
-repo sync -j16
-
 #cd bionic
 #git checkout -f
 #git clean -d -f
