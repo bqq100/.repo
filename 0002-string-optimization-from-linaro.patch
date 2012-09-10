@@ -1,7 +1,7 @@
-From 271b55e112258820e8b3f9d9d28a1627d98388ff Mon Sep 17 00:00:00 2001
+From 54de67390aed6dc13c12e0521df06d4a3268fb3c Mon Sep 17 00:00:00 2001
 From: river <riverzhou2000@gmail.com>
 Date: Thu, 6 Sep 2012 21:00:29 +0800
-Subject: [PATCH 2/2] string optimization from linaro
+Subject: [PATCH 2/3] string optimization from linaro
 
 Change-Id: Iffe34d53c5a9a0c89f6887f018046279995237a7
 ---
