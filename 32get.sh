@@ -1,16 +1,18 @@
 #!/bin/sh
 
-rm prebuilts/gcc/linux-x86/arm/arm-eabi-4.6
-rm prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6
+rm -rf prebuilts/gcc/linux-x86/arm/arm-eabi-4.6
+rm -rf prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6
 
 repo sync -j16
 
 cp gcc prebuilts/tools/gcc-sdk/
 cp set.sh prebuilts/gcc/linux-x86/arm/
 
-cd prebuilts/gcc/linux-x86/arm
-./set.sh
-cd ../../../../
+if [ -e prebuilts/gcc/linux-x86/arm/set.sh ]; then
+	cd prebuilts/gcc/linux-x86/arm
+	./set.sh
+	cd ../../../../
+fi
 
 cd bionic
 git checkout -f
