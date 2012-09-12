@@ -5,7 +5,7 @@
            fetch="git://git.omapzoom.org/" />
 
   <!-- CM removals -->
-  <remove-project name="CyanogenMod/android_bionic" />
+  <!-- <remove-project name="CyanogenMod/android_bionic" /> -->
   <remove-project name="CyanogenMod/android_build" />
   <remove-project name="CyanogenMod/android_development" />
   <remove-project name="CyanogenMod/android_frameworks_av" />
@@ -14,7 +14,7 @@
   <remove-project name="CyanogenMod/android_hardware_libhardware" />
   <remove-project name="CyanogenMod/android_hardware_libhardware_legacy" />
   <remove-project name="CyanogenMod/android_hardware_ril" />
-  <remove-project name="CyanogenMod/android_hardware_ti_omap4xxx" />
+  <!-- <remove-project name="CyanogenMod/android_hardware_ti_omap4xxx" /> -->
   <remove-project name="CyanogenMod/android_hardware_ti_wlan" />
   <remove-project name="CyanogenMod/android_hardware_ti_wpan" />
   <remove-project name="CyanogenMod/android_hardware_qcom_media" />
@@ -33,7 +33,7 @@
   <project path="build" name="STS-Dev-Team/android_build" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="bionic" name="STS-Dev-Team/android_bionic" />
+  <!-- <project path="bionic" name="STS-Dev-Team/android_bionic" /> -->
   <project path="development" name="STS-Dev-Team/android_development" />
   <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" />
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" revision="jellybean-3way" />
@@ -41,7 +41,7 @@
   <project path="hardware/libhardware" name="STS-Dev-Team/android_hardware_libhardware" />
   <project path="hardware/libhardware_legacy" name="STS-Dev-Team/android_hardware_libhardware_legacy" />
   <project path="hardware/ril" name="STS-Dev-Team/android_hardware_ril" />
-  <project path="hardware/ti/omap4xxx" name="STS-Dev-Team/android_hardware_ti_omap4xxx" />
+  <!-- <project path="hardware/ti/omap4xxx" name="STS-Dev-Team/android_hardware_ti_omap4xxx" /> -->
   <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" revision="jellybean" />
   <project path="packages/apps/Contacts" name="STS-Dev-Team/android_packages_apps_Contacts" />
   <project path="packages/apps/Mms" name="STS-Dev-Team/android_packages_apps_Mms" />
@@ -83,7 +83,7 @@
   <project path="external/crda" name="platform/external/crda" remote="omapzoom" revision="p-ics-mr0" />
   <project path="external/wpa_supplicant_8_ti" name="platform/external/wpa_supplicant_8_ti" remote="omapzoom" revision="jb-release" />
   <project path="frameworks/opt/mms" name="platform/frameworks/opt/mms" remote="omapzoom" revision="master"/>
-  <project path="hardware/ti/domx" name="platform/hardware/ti/domx" remote="omapzoom" revision="jb-release" />
+  <!-- <project path="hardware/ti/domx" name="platform/hardware/ti/domx" remote="omapzoom" revision="jb-release" /> -->
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" remote="omapzoom" revision="p-jb-release" />
   <project path="packages/apps/OMAPCamera" name="platform/packages/apps/OMAPCamera" remote="omapzoom" revision="jb-release" />
   
