@@ -7,4 +7,5 @@
   <project name="fat-tire/android_device_bn_encore" path="device/bn/encore" remote="gh" revision="jellybean" />
   <project name="fat-tire/android_hardware_ti_omap3" path="hardware/ti/omap3" remote="gh" revision="jellybean" />
   <project name="hazenme/ti-omap-encore-kernel3" path="kernel/bn/encore" remote="gh" revision="encore-omap3-3" />
+  <project name="eyeballer/proprietary_vendor_bn" path="vendor/bn" remote="gh" revision="jellybean" />
 </manifest>
