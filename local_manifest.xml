@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="git://github.com/" name="gh" />
+  <remove-project name="CyanogenMod/android_hardware_ti_omap3" />
+  <remove-project name="CyanogenMod/android_hardware_ti_wlan" />
+  <project name="fat-tire/android_hardware_ti_wlan" path="hardware/ti/wlan" remote="gh" revision="jellybean" />
+  <project name="fat-tire/android_device_bn_encore" path="device/bn/encore" remote="gh" revision="jellybean" />
+  <project name="fat-tire/android_hardware_ti_omap3" path="hardware/ti/omap3" remote="gh" revision="jellybean" />
+  <project name="hazenme/ti-omap-encore-kernel3" path="kernel/bn/encore" remote="gh" revision="encore-omap3-3" />
+</manifest>
