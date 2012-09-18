@@ -18,6 +18,7 @@
   <remove-project name="CyanogenMod/android_hardware_ti_wlan" />
   <remove-project name="CyanogenMod/android_hardware_ti_wpan" />
   <remove-project name="CyanogenMod/android_hardware_qcom_media" />
+  <remove-project name="CyanogenMod/android_packages_apps_Bluetooth" />
   <remove-project name="CyanogenMod/android_packages_apps_Contacts" />
   <remove-project name="CyanogenMod/android_packages_apps_Mms" />
   <remove-project name="CyanogenMod/android_packages_apps_Phone" />
@@ -43,6 +44,7 @@
   <project path="hardware/ril" name="STS-Dev-Team/android_hardware_ril" />
   <!-- <project path="hardware/ti/omap4xxx" name="STS-Dev-Team/android_hardware_ti_omap4xxx" /> -->
   <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" revision="jellybean" />
+  <project path="packages/apps/Bluetooth" name="STS-Dev-Team/android_packages_apps_Bluetooth" />
   <project path="packages/apps/Contacts" name="STS-Dev-Team/android_packages_apps_Contacts" />
   <project path="packages/apps/Mms" name="STS-Dev-Team/android_packages_apps_Mms" />
   <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
