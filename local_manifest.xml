@@ -29,6 +29,12 @@
   <remove-project name="CyanogenMod/android_packages_providers_DrmProvider" />
   <remove-project name="CyanogenMod/android_packages_providers_TelephonyProvider" />
   <remove-project name="CyanogenMod/android_system_core" />
+
+  <!-- CM additions -->
+  <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" revision="jellybean" />
+
+  <!-- BQUINN additions -->
+  <project path="packages/apps/Mms" name="bquinn/android_packages_apps_Mms" />
   
   <!-- CM replacements -->
   <project path="build" name="STS-Dev-Team/android_build" >
@@ -46,7 +52,7 @@
   <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" revision="jellybean" />
   <project path="packages/apps/Bluetooth" name="STS-Dev-Team/android_packages_apps_Bluetooth" />
   <project path="packages/apps/Contacts" name="STS-Dev-Team/android_packages_apps_Contacts" />
-  <project path="packages/apps/Mms" name="STS-Dev-Team/android_packages_apps_Mms" />
+  <!-- <project path="packages/apps/Mms" name="STS-Dev-Team/android_packages_apps_Mms" /> -->
   <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
   <project path="packages/apps/Settings" name="STS-Dev-Team/android_packages_apps_Settings" />
   <project path="packages/apps/Stk" name="STS-Dev-Team/android_packages_apps_Stk" />
