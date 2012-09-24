@@ -30,9 +30,6 @@
   <remove-project name="CyanogenMod/android_packages_providers_TelephonyProvider" />
   <remove-project name="CyanogenMod/android_system_core" />
 
-  <!-- CM additions -->
-  <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" revision="jellybean" />
-
   <!-- BQUINN additions -->
   <project path="packages/apps/Mms" name="bquinn/android_packages_apps_Mms" />
   
