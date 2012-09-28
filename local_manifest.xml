@@ -31,7 +31,7 @@
   <remove-project name="CyanogenMod/android_system_core" />
 
   <!-- BQUINN additions -->
-  <project path="packages/apps/Mms" name="bquinn/android_packages_apps_Mms" />
+  <project path="packages/apps/Mms" name="bqq100/android_packages_apps_Mms" />
   
   <!-- CM replacements -->
   <project path="build" name="STS-Dev-Team/android_build" >
