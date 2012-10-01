@@ -25,6 +25,7 @@
   <remove-project name="CyanogenMod/android_packages_apps_Settings" />
   <remove-project name="CyanogenMod/android_packages_apps_Stk" />
   <remove-project name="CyanogenMod/android_packages_apps_VoiceDialer" />
+  <remove-project name="CyanogenMod/android_packages_apps_CMUpdater" />
   <remove-project name="CyanogenMod/android_packages_providers_ContactsProvider" />
   <remove-project name="CyanogenMod/android_packages_providers_DrmProvider" />
   <remove-project name="CyanogenMod/android_packages_providers_TelephonyProvider" />
