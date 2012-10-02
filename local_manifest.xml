@@ -8,8 +8,6 @@
   <!-- <remove-project name="CyanogenMod/android_bionic" /> -->
   <remove-project name="CyanogenMod/android_build" />
   <remove-project name="CyanogenMod/android_development" />
-  <remove-project name="CyanogenMod/android_external_chromium" />"
-  <remove-project name="CyanogenMod/android_external_webkit" />"
   <remove-project name="CyanogenMod/android_frameworks_av" />
   <remove-project name="CyanogenMod/android_frameworks_base" />
   <remove-project name="CyanogenMod/android_frameworks_native" />
@@ -39,8 +37,6 @@
   </project>
   <!-- <project path="bionic" name="STS-Dev-Team/android_bionic" /> -->
   <project path="development" name="STS-Dev-Team/android_development" />
-  <project path="external/chromium" name="platform/external/chromium" remote="omapzoom" revision="jb-release" />
-  <project path="external/webkit" name="CyanogenMod/android_external_webkit" revision="bec116a01ee6a6add99a95731fc1aa1b57edffd3" />"
   <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" />
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" revision="jellybean-3way" />
   <project path="frameworks/native" name="STS-Dev-Team/android_frameworks_native" />
