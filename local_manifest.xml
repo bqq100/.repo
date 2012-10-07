@@ -89,5 +89,7 @@
   <!-- <project path="hardware/ti/domx" name="platform/hardware/ti/domx" remote="omapzoom" revision="jb-release" /> -->
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" remote="omapzoom" revision="p-jb-release" />
   <project path="packages/apps/OMAPCamera" name="platform/packages/apps/OMAPCamera" remote="omapzoom" revision="jb-release" />
-  
+
+  <project path="packages/apps/otaupdater" name="OTAUpdateCenter/ota-update-centre" revision="noicon" />
+
 </manifest>
