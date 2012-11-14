@@ -77,8 +77,8 @@
   <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="master" />
 
   <!-- local misc -->
+  <project path="frameworks/opt/mms" name="STS-Dev-Team/android_frameworks_opt_mms" revision="master"/>
   <project path="frameworks/opt/telephony" name="STS-Dev-Team/android_frameworks_opt_telephony" revision="jellybean"/>
-  <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" revision="ics" />
   <project path="kernel/motorola/omap4_xt912" name="STS-Dev-Team/kernel_omap4_xt912" revision="master" />
   <project path="prebuilt/linux-x86/toolchain/arm-eabi-4.7" name="STS-Dev-Team/arm-eabi-4.7" revision="master" />
 
@@ -88,9 +88,10 @@
   <project path="external/bltsville" name="platform/external/bltsville" remote="omapzoom" revision="master"/>
   <project path="external/crda" name="platform/external/crda" remote="omapzoom" revision="p-ics-mr0" />
   <project path="external/wpa_supplicant_8_ti" name="platform/external/wpa_supplicant_8_ti" remote="omapzoom" revision="jb-release" />
-  <project path="frameworks/opt/mms" name="platform/frameworks/opt/mms" remote="omapzoom" revision="master"/>
   <!-- <project path="hardware/ti/domx" name="platform/hardware/ti/domx" remote="omapzoom" revision="jb-release" /> -->
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" remote="omapzoom" revision="p-jb-release" />
   <project path="packages/apps/OMAPCamera" name="platform/packages/apps/OMAPCamera" remote="omapzoom" revision="jb-release" />
-  
+
+  <project path="packages/apps/otaupdater" name="STS-Dev-Team/ota-update-centre" revision="noicon" />
+
 </manifest>
