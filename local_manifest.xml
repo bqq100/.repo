@@ -32,12 +32,19 @@
   <remove-project name="CyanogenMod/android_system_core" />
 
   <!-- BQUINN additions -->
+  <remove-project name="CyanogenMod/android_vendor_cm" />
   <project path="packages/apps/Mms" name="bqq100/android_packages_apps_Mms" />
+  <project path="vendor/cm" name="bqq100/android_vendor_cm" />
+  <project path="build" name="bqq100/android_build" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
   
   <!-- CM replacements -->
+<!-- BQUINN removal
   <project path="build" name="STS-Dev-Team/android_build" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
+-->
   <!-- <project path="bionic" name="STS-Dev-Team/android_bionic" /> -->
   <project path="development" name="STS-Dev-Team/android_development" />
   <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" />
