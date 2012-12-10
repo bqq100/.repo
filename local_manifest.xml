@@ -27,8 +27,8 @@
   <project path="system/core" name="KFire-Android/android_system_core" revision="jellybean" />
 
   <!-- local projects -->
-  <project path="device/amazon/otter" name="KFire-Android/device-amazon-otter" revision="jb" />
-  <project path="kernel/amazon/otter" name="KFire-Android/kernel_omap" revision="4AI1.7" />
-  <project path="vendor/amazon/otter" name="KFire-Android/android_vendor_amazon_otter" revision="jb" />
+  <project path="device/amazon/otter2" name="bqq100/device-amazon-otter2" revision="jb" />
+  <project path="kernel/amazon/otter2" name="bqq100/kernel_omap" revision="4AI1.7" />
+  <project path="vendor/amazon/otter2" name="bqq100/android_vendor_amazon_otter2" revision="jb" />
     
   </manifest>
